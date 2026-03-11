@@ -1,0 +1,286 @@
+.checkout-page-container {
+  max-width: 1170px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #808080;
+  margin-bottom: 40px;
+}
+
+.breadcrumb span {
+  color: #000;
+}
+
+.billing-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.checkout-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  align-items: flex-start;
+}
+
+.billing-form {
+  flex: 1;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.input-field label {
+  color: #808080;
+  margin-bottom: 8px;
+}
+
+.input-field input {
+  background: #F5F5F5;
+  border: none;
+  padding: 13px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.save-info-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.order-summary-box {
+  width: 420px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-left img {
+  width: 50px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.summary-calc .calc-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.summary-calc hr {
+  border: none;
+  border-top: 1px solid #808080;
+  opacity: 0.5;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.payment-options {
+  margin-top: 30px;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-cards {
+  display: flex;
+  gap: 8px;
+}
+
+.payment-cards img {
+  height: 15px;
+}
+
+.coupon-checkout {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.coupon-checkout input {
+  border: 1px solid black;
+  padding: 12px;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.apply-coupon-btn {
+  background: #DB4444;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.place-order-btn {
+  background: #DB4444;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 180px;
+  margin-top: 32px;
+}
+.payment-cards {
+  display: flex;
+  gap: 15px; 
+  align-items: center;
+  margin-top: 10px;
+}
+
+.payment-cards img {
+  height: 35px; 
+  width: 60px;  
+  object-fit: contain; 
+  background-color: #f9f9f9; 
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.item-left img {
+  width: 60px; 
+  height: 50px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.place-order-btn {
+  background: #DB4444;
+  color: white;
+  border: none;
+  padding: 13px 47px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 32px;
+  transition: 0.3s;
+}
+
+.place-order-btn:hover {
+  background: #bd3a3a;
+}
+@media (max-width: 1024px) {
+  .checkout-flex {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .order-summary-box {
+    width: 100%;
+  }
+
+  .billing-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-page-container {
+    padding: 0 15px;
+  }
+
+  .billing-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .checkout-flex {
+    gap: 40px;
+  }
+
+  .payment-cards {
+    gap: 12px;
+  }
+
+  .payment-cards img {
+    height: 30px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  .billing-title {
+    font-size: 22px;
+  }
+
+  .input-field input {
+    padding: 10px;
+  }
+
+  .save-info-checkbox label {
+    font-size: 13px;
+  }
+
+  .payment-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .payment-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .payment-cards img {
+    width: 100%;
+    height: 35px;
+  }
+
+  .coupon-checkout {
+    flex-direction: column;
+  }
+
+  .apply-coupon-btn, .place-order-btn {
+    width: 100%;
+  }
+
+  .item-left img {
+    width: 50px;
+    height: 40px;
+  }
+
+  .item-left span {
+    font-size: 14px;
+  }
+}

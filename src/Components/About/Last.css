@@ -1,0 +1,32 @@
+.last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+.last1,.last2,.last3{
+    text-align: center;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.last1 p,.last2 p,.last3 p{
+font-size: 14px;
+font-weight: 300;
+line-height: 21px;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #cac8c8;
+    border-radius: 50%;
+    background-color: #afaaaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

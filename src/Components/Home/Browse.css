@@ -1,0 +1,151 @@
+.certs{
+    display: flex;
+     gap: 40px;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+}
+.phone{
+    width: 170px;
+    height: 145px;
+    border-radius: 4px;
+    border: 1px solid  gray;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.Browse{
+    padding: 150px;
+}
+.phone:hover{
+    background-color: #DB4444;
+    color: white;
+}
+.browse-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.chevron{
+    display: flex;
+    justify-content: end;
+    
+}
+.browse-wrapper h4{
+    font-size: 22px;
+    font-weight: 400;
+    color: #DB4444;
+    margin-left: 30px;
+}
+.browse-wrapper p{
+    font-size: 48px;
+    font-weight: 600;
+}
+.span{
+    width: 16px;
+    height: 32px;
+    background-color: #db4444;
+    border-radius: 4px;
+    position: relative;
+    top: 50px;
+}
+.map-arrows {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  justify-content: end;
+  position: relative;
+  top: -100px;
+}
+
+.map-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media (max-width: 1200px) {
+  .Browse {
+    padding: 60px 40px;
+  }
+  .browse-wrapper p {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .map-arrows {
+    top: -60px;
+  }
+  .browse-wrapper p {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Browse {
+    padding: 40px 20px;
+  }
+  .map-arrows {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .span {
+    top: 38px;
+  }
+  .browse-wrapper h4 {
+    font-size: 18px;
+  }
+  .certs {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .phone {
+    width: calc(50% - 15px);
+    height: 130px;
+  }
+  .browse-wrapper p {
+    font-size: 24px;
+    text-align: center;
+  }
+  .browse-wrapper h4 {
+    text-align: center;
+    margin-left: 0;
+  }
+  .span {
+    display: none;
+  }
+}
+
+@media (max-width: 330px) {
+  .Browse {
+    padding: 30px 10px;
+  }
+  .certs {
+    gap: 10px;
+  }
+  .phone {
+    width: 100%;
+    height: 120px;
+  }
+  .browse-wrapper p {
+    font-size: 20px;
+  }
+  .map-arrow {
+    width: 32px;
+    height: 32px;
+  }
+}

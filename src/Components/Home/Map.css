@@ -1,0 +1,289 @@
+.map {
+  padding: 40px 5%;
+}
+
+.map-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.map-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.map-today {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-bar {
+  width: 16px;
+  height: 32px;
+  background-color: #db4444;
+  border-radius: 4px;
+}
+
+.map-today p {
+  color: #db4444;
+  font-weight: 600;
+  margin: 0;
+}
+
+.map-middle {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.map-middle h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.timer-item b {
+  font-size: 32px;
+}
+
+.timer-colon {
+  font-size: 28px;
+  color: #db4444;
+  margin-bottom: 8px;
+}
+
+.map-arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.map-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #750505;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+ margin-top: 200px;
+}
+
+.map-arrow:hover {
+  background-color: #db4444;
+  color: white;
+}
+
+.map-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-card-img {
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.map-card-img img {
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.map-discount {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #db4444;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.map-icons {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+  color: #333;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  background-color: #db4444;
+  color: white !important;
+}
+
+.icon-btn:hover svg {
+  stroke: white;
+}
+
+.asdfgh {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 5;
+}
+
+.map-card-img:hover .asdfgh {
+  transform: translateY(0%);
+}
+
+.map-card h3 {
+  font-size: 16px;
+  margin: 12px 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.map-price {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.map-new {
+  color: #db4444;
+  font-weight: 600;
+}
+
+.map-old {
+  color: #7d8184;
+  text-decoration: line-through;
+}
+
+.map-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #7d8184;
+  font-size: 14px;
+}
+
+.btn123 {
+  display: block;
+  margin: 60px auto 0;
+  width: 234px;
+  height: 56px;
+  border: none;
+  background-color: #db4444;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+@media (max-width: 992px) {
+  .map-middle {
+    gap: 20px;
+  }
+  .map-middle h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .map-middle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .timer-item b {
+    font-size: 26px;
+  }
+  .asdfgh {
+    transform: translateY(0%);
+  }
+  .map-arrow {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-middle h2 {
+    font-size: 22px;
+  }
+  .timer {
+    gap: 10px;
+  }
+  .timer-item b {
+    font-size: 20px;
+  }
+  .timer-colon {
+    font-size: 20px;
+  }
+  .map-card-img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 330px) {
+  .map {
+    padding: 20px 10px;
+  }
+  .map-middle h2 {
+    font-size: 18px;
+  }
+  .timer-item b {
+    font-size: 18px;
+  }
+  .btn123 {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,256 @@
+.catalog-container {
+  padding: 80px 5%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.catalog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.decor-line {
+  width: 20px;
+  height: 40px;
+  background-color: #db4444;
+  border-radius: 4px;
+}
+
+.label-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.label-txt {
+  color: #db4444;
+  font-weight: 600;
+}
+
+.main-heading {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-switches {
+  display: flex;
+  gap: 10px;
+}
+
+.switch-item {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.switch-item:hover {
+  background-color: #db4444;
+  color: white;
+}
+
+.items-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.item-preview {
+  position: relative;
+  height: 250px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.item-img {
+  max-width: 170px;
+  max-height: 150px;
+  object-fit: contain;
+  transition: 0.4s ease;
+}
+
+.item-box:hover .item-img {
+  transform: scale(1.1);
+}
+
+.status-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #00ff66;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.float-actions {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+}
+
+.action-dot {
+  width: 34px;
+  height: 34px;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.action-dot:hover {
+  background-color: #db4444;
+  color: white;
+}
+
+.buy-strip {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.item-box:hover .buy-strip {
+  bottom: 0;
+}
+
+.item-details {
+  padding-top: 16px;
+}
+
+.item-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.metrics-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price-tag {
+  color: #db4444;
+  font-weight: 600;
+}
+
+.stars-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.votes-num {
+  color: #7d8184;
+  font-size: 14px;
+}
+
+.hue-selector {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.hue-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.hue-ball.active {
+  border-color: #000;
+  padding: 2px;
+  background-clip: content-box;
+}
+
+.hue-ball.dark { background-color: #1a1a1a; }
+.hue-ball.scarlet { background-color: #db4444; }
+
+.footer-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.primary-loader {
+  background-color: #db4444;
+  color: white;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-link {
+  text-decoration: none;
+  display: flex;
+}
+
+.action-dot {
+  transition: 0.3s;
+}
+
+.action-dot:hover {
+  background-color: #DB4444 !important;
+  color: white !important;
+}
+
+
+
+
+@media (max-width: 1100px) {
+  .items-layout { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 850px) {
+  .items-layout { grid-template-columns: repeat(2, 1fr); }
+  .main-heading { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+  .items-layout { grid-template-columns: 1fr; }
+  .catalog-container { padding: 40px 15px; }
+  .buy-strip { bottom: 0; }
+}
+
+@media (max-width: 330px) {
+  .main-heading { font-size: 22px; }
+  .catalog-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .item-preview { height: 220px; }
+}

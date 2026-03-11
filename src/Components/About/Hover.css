@@ -1,0 +1,46 @@
+.xax1{
+display: flex;
+justify-content: center;
+gap: 30px;
+padding: 100px;
+flex-wrap: wrap;
+}
+.ha1, .ha2, .ha3, .ha4{
+    width: 250px;
+   min-height: 210px;
+    border: 1px solid rgb(215, 214, 214);
+    text-align: center;
+     border-radius: 6px;
+     padding: 10px;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.ha1 p, .ha2 p, .ha3 p, .ha4 p{
+font-size: 16px;
+font-weight: 400;
+color: black;
+padding: 10px;
+
+}
+.ha1 h1, .ha2 h1, .ha3 h1, .ha4 h1{
+font-size: 30px;
+font-weight: 700;
+letter-spacing: 3px;
+}
+
+
+.ha1:hover, .ha2:hover, .ha3:hover, .ha4:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.ha1:hover p, .ha2:hover p, .ha3:hover p, .ha4:hover p {
+    color: white;
+}
+.ha1:hover svg, .ha2:hover svg, 
+.ha3:hover svg, .ha4:hover svg {
+    stroke: black;
+}

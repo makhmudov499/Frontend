@@ -1,0 +1,207 @@
+
+
+.signup-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+}
+
+.signup-image {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.signup-image img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 50px;
+ 
+}
+
+.signup-form {
+  width: 50%;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup-form h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.signup-form > p {
+  color: #888;
+  font-size: 14px;
+  margin-top: -10px;
+}
+.signup-form span{
+    font-size: 14px;
+}
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup-form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-size: 15px;
+  outline: none;
+  background: transparent;
+  color: #333;
+}
+
+.signup-form input::placeholder {
+  color: #aaa;
+}
+
+.signup-form input:focus {
+  border-bottom: 1px solid #DB4444;
+}
+
+.btn-create {
+  width: 100%;
+  background-color: #DB4444;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-create:hover {
+  background-color: #c03333;
+}
+
+.btn-google {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #333;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-google:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-google img {
+  width: 20px;
+}
+
+.login-link {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.login-link span {
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-link span:hover {
+  color: #DB4444;
+}
+
+
+@media (max-width: 1024px) {
+  .signup-form {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+
+  .signup-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .signup-image img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .signup-form {
+    width: 100%;
+    padding: 30px 40px;
+    gap: 16px;
+  }
+
+  .signup-form h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-image {
+    height: 250px;
+  }
+
+  .signup-form {
+    padding: 24px 24px;
+    gap: 14px;
+  }
+
+  .signup-form h2 {
+    font-size: 24px;
+  }
+
+  .btn-create,
+  .btn-google {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 330px) {
+  .signup-image {
+    height: 200px;
+  }
+
+  .signup-form {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .signup-form h2 {
+    font-size: 20px;
+  }
+
+  .btn-create,
+  .btn-google {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
