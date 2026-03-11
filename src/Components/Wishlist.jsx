@@ -3,7 +3,6 @@ import { useWishlist } from "../Wishlist/WishlistContext";
 import { Trash2, ShoppingCart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import "../Wishlist.css";
-import Navbar from "./SignUp/Navbar";
 import Header from "./SignUp/Header";
 import Footer from "./Home/Footer";
 
@@ -13,7 +12,6 @@ const Wishlist = () => {
 
   return (
     <>
-      <Navbar />
       <Header />
       <div className="wishlist-page">
         <div className="wishlist-header" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '30px', alignItems: 'center' }}>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from "../SignUp/Navbar"
 import Nav from "../SignUp/Header"
 import Footer from '../Home/Footer'
 import Input from './Input'
@@ -10,7 +9,6 @@ const Contact = () => {
         <Helmet>
         <title>Contact Page</title>
         </Helmet>
-        <Navbar/>
         <Nav/>
         <Input/>
         <Footer/>

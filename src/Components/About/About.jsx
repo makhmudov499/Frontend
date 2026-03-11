@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../SignUp/Navbar'
 import Nav from "../SignUp/Header"
 import Footer from '../Home/Footer'
 import Story from './Story'
@@ -14,7 +13,6 @@ const About = () => {
         <Helmet>
         <title>About Page</title>
         </Helmet>
-        <Navbar/>
         <Nav/>
         <Story/>
         <Hover/>

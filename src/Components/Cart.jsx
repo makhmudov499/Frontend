@@ -1,30 +1,30 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { useCart } from "../CartContext/CartContext";
+import { useTranslation } from 'react-i18next';
 import "./Cart.css"; 
-import Navbar from "../Components/SignUp/Navbar";
 import Header from "../Components/SignUp/Header";
 import Footer from "../Components/Home/Footer";
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
+  const { t } = useTranslation();
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
     <>
-      <Navbar/>
       <Header/>
       <div className="cart-container">
-        <div className="breadcrumb">Home / Cart</div>
+        <div className="breadcrumb">{t('cart_breadcrumb')}</div>
         
         <table className="cart-table">
           <thead>
             <tr>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Subtotal</th>
+              <th>{t('cart_product')}</th>
+              <th>{t('cart_price')}</th>
+              <th>{t('cart_quantity')}</th>
+              <th>{t('cart_subtotal')}</th>
             </tr>
           </thead>
           <tbody>
@@ -41,7 +41,7 @@ const Cart = () => {
                     type="number" 
                     value={item.quantity} 
                     min="1" 
-                    onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                    onChange={(e) => updateQuantity(item.id, parseInt(e.target.value) || 1)}
                   />
                 </td>
                 <td>${item.price * item.quantity}</td>
@@ -52,35 +52,35 @@ const Cart = () => {
 
         <div className="cart-actions">
           <Link to="/home">
-            <button className="outline-btn">Return To Shop</button>
+            <button className="outline-btn">{t('cart_return_shop')}</button>
           </Link>
-          <button className="outline-btn">Update Cart</button>
+          <button className="outline-btn">{t('cart_update')}</button>
         </div>
 
         <div className="cart-bottom">
           <div className="coupon-section">
-            <input type="text" placeholder="Coupon Code" />
-            <button className="primary-btn">Apply Coupon</button>
+            <input type="text" placeholder={t('cart_coupon_placeholder')} />
+            <button className="primary-btn">{t('cart_apply_coupon')}</button>
           </div>
           
           <div className="cart-total-card">
-            <h3>Cart Total</h3>
+            <h3>{t('cart_total_title')}</h3>
             <div className="total-row">
-              <span>Subtotal:</span>
+              <span>{t('cart_subtotal')}:</span>
               <span>${subtotal}</span>
             </div>
             <hr />
             <div className="total-row">
-              <span>Shipping:</span>
-              <span>Free</span>
+              <span>{t('cart_shipping')}:</span>
+              <span>{t('cart_shipping_free')}</span>
             </div>
             <hr />
             <div className="total-row bold">
-              <span>Total:</span>
+              <span>{t('cart_total')}:</span>
               <span>${subtotal}</span>
             </div>
             <Link to="/checkout">
-              <button className="primary-btn full-width">Process to checkout</button>
+              <button className="primary-btn full-width">{t('cart_checkout')}</button>
             </Link>
           </div>
         </div>

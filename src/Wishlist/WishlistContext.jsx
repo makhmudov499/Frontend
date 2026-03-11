@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-
+import { useTranslation } from "react-i18next";
 
 const WishlistContext = createContext();
 
 export const WishlistProvider = ({ children }) => {
+  const { t } = useTranslation();
   const [wishlist, setWishlist] = useState(() => {
     const saved = localStorage.getItem("wishlist");
     return saved ? JSON.parse(saved) : [];
@@ -38,7 +39,10 @@ export const WishlistProvider = ({ children }) => {
 
     localStorage.setItem("cart", JSON.stringify(currentCart));
     setWishlist([]);
+    
     window.dispatchEvent(new Event("storage"));
+    
+   
   };
 
   return (

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Links } from 'react-router-dom'
 import Nav from "../SignUp/Header"
-import Navbar from "../SignUp/Navbar"
 import Footer from './Footer'
 import SwiperComp from './Swiper'
 import Map from './Map'
@@ -19,7 +18,6 @@ const Home = () => {
       <Helmet>
         <title>Home Page</title>
       </Helmet>
-        <Navbar/>
         <Nav/>
         <SwiperComp/>
         <Map/>
