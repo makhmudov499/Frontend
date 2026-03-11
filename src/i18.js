@@ -2,7 +2,8 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import rus from './locales/RUS.json'
 import uzb from './locales/UZB.json'
-import eng from './locales/ENG.json';
+import eng from './locales/Eng.json'
+
 i18n.use(initReactI18next).init({
   resources: {
     eng: { translation: eng },
