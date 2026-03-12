@@ -24,9 +24,8 @@ const Header = () => {
     <header className="header-container">
       <div className="header-content">
         <div className="logo">
-          <Link to="/"><h1>Exclusive</h1></Link>
-        </div>
-
+     </div>
+<Link to="/"><h1>{t('logo_name')}</h1></Link>   
         <nav className="nav-menu-desktop">
           <ul>
             <li><Link to="/">{t('home')}</Link></li>

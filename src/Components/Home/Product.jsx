@@ -19,8 +19,8 @@ const Shop = () => {
   const shopProducts = products.filter(p => p.type === "shop");
 
   const filteredProducts = shopProducts.filter((p) =>
-    p.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  t(p.name).toLowerCase().includes(searchQuery.toLowerCase())
+);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -75,7 +75,7 @@ const Shop = () => {
               </div>
 
               <div className="item-details">
-                <h3 className="item-name">{obj.name}</h3>
+                <h3 className="item-name">{t(obj.name)}</h3>
                 <div className="metrics-row">
                   <span className="price-tag">${obj.price}</span>
                   <div className="stars-box">

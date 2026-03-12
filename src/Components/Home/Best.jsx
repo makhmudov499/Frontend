@@ -19,7 +19,7 @@ const Best = () => {
   const bestSellingProducts = products.filter(p => p.type === "best")
 
   const filteredProducts = bestSellingProducts.filter((p) =>
-    p.name.toLowerCase().includes(searchQuery.toLowerCase())
+    t(p.name).toLowerCase().includes(searchQuery.toLowerCase())
   )
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const Best = () => {
                     <button className="action-btn"><Eye size={18} color="black" /></button>
                   </Link>
                 </div>
-                <img src={product.img} alt={product.name} />
+                <img src={product.img} alt={t(product.name)} />
                 <button 
                   className='add-to-cart' 
                   onClick={() => addToCart(product)}
@@ -68,7 +68,7 @@ const Best = () => {
               </div>
 
               <div className='card-info'>
-                <p>{product.name}</p>
+                <p>{t(product.name)}</p>
                 <div className='price'>
                   <span className='new-price'>${product.price}</span>
                   {product.oldPrice && <span className='old-price'>${product.oldPrice}</span>}
@@ -91,4 +91,4 @@ const Best = () => {
   )
 }
 
-export default Best 
+export default Best
